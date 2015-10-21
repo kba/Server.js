@@ -16,7 +16,7 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
     "hint": "./node_modules/jshint/bin/jshint bin/* lib test",
-    "run": "nodemon -w lib -w bin   ./bin/ldf-server  config-example.json"
+    "run": "nodemon -w lib -w bin -w config-example-advanced.json ./bin/ldf-server  config-example.json 3001"
   },
   "dependencies": {
     "jsonld": "^0.3.0",
@@ -30,6 +30,7 @@
     "negotiate": "^1.0.1",
     "qejs": "^3.0.0",
     "request": "^2.27.0",
+    "tson": "0.0.5",
     "uritemplate": "^0.3.0"
   },
   "optionalDependencies": {

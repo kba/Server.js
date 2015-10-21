@@ -1,5 +1,6 @@
 {
   "title": "My Linked Data Fragments server",
+  "baseURL": "http://infolis.gesis.org/",
 
   "datasources": {
     "infolis": {
@@ -7,7 +8,14 @@
       "type": "MongoDatasource",
       "description": "Infolis live",
       "settings": {
-          "url": "mongo://localhost/infolis"
+        "mongoURI": "mongodb://localhost/infolis",
+        "baseURI": "http://infolis.gesis.org/infolink",
+        "apiPrefix": "/api",
+        "tson": "../infolis-web/data/infolis.tson",
+        "schemaPrefix": "/schema",
+        "mongoOptions": {
+          "server": { "socketOptions": { "connectTimeoutMS": 5000 } }
+        }
       }
     }
   },
