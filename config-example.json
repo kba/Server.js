@@ -2,17 +2,13 @@
   "title": "My Linked Data Fragments server",
 
   "datasources": {
-    "dbpedia": {
-      "title": "DBpedia 2014",
-      "type": "HdtDatasource",
-      "description": "DBpedia 2014 with an HDT back-end",
-      "settings": { "file": "data/dbpedia2014.hdt" }
-    },
-    "dbpedia-sparql": {
-      "title": "DBpedia 3.9 (Virtuoso)",
-      "type": "SparqlDatasource",
-      "description": "DBpedia 3.9 with a Virtuoso back-end",
-      "settings": { "endpoint": "http://dbpedia.restdesc.org/", "defaultGraph": "http://dbpedia.org" }
+    "infolis": {
+      "title": "Infolis Mongo Dataset",
+      "type": "MongoDatasource",
+      "description": "Infolis live",
+      "settings": {
+          "url": "mongo://localhost/infolis"
+      }
     }
   },
 
