@@ -8,10 +8,10 @@
       "type": "MongoDatasource",
       "description": "Infolis live",
       "settings": {
-        "mongoURI": "mongodb://localhost/infolis",
+        "mongoURI": "mongodb://localhost:27018/infolis-web",
         "baseURI": "http://infolis.gesis.org/infolink",
         "apiPrefix": "/api",
-        "tson": "../infolis-web/data/infolis.tson",
+        "schemo": "../infolis-web/data/infolis.tson",
         "schemaPrefix": "/schema",
         "mongoOptions": {
           "server": { "socketOptions": { "connectTimeoutMS": 5000 } }
