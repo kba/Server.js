@@ -1,10 +1,10 @@
 {
-  "title": "My Linked Data Fragments server",
+  "title": "InFoLiS Linked Data Fragments Server",
   "baseURL": "http://infolis.gesis.org/",
 
   "datasources": {
     "infolis": {
-      "title": "Infolis Mongo Dataset",
+      "title": "Infolis Mongoose-JSONLD Dataset",
       "type": "MongoDatasource",
       "description": "Infolis live",
       "settings": {
