@@ -124,6 +124,7 @@ else {
       function datasourceError(error) {
         delete datasources[datasourcePath];
         process.stderr.write('Could not load datasource ' + datasourceName + ': ' + error.message + '\n');
+        process.stderr.write(error.stack);
       }
     }
   });
@@ -138,7 +139,7 @@ else {
   };
 
   // Set up assets
-  config.assetsPath = baseURLPath + 'assets/';
+  config.assetsPath = (config.assetsPath || baseURLPath + 'assets/');
 
   // Set up routers, views, and controllers
   config.routers = instantiateAll(config.routers,  '../lib/routers/');

@@ -16,17 +16,22 @@
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
-    "hint": "./node_modules/jshint/bin/jshint bin/* lib test"
+    "hint": "./node_modules/jshint/bin/jshint bin/* lib test",
+    "run": "nodemon -w lib -w bin -w node_modules/mongoose-jsonld -w config-example.json ./bin/ldf-server  config-example.json 3001"
   },
   "dependencies": {
-    "qejs": "^3.0.0",
-    "n3": "^0.4.0",
-    "jsonld": "^0.4.2",
-    "request": "^2.27.0",
-    "mime": "^1.2.11",
-    "negotiate": "^1.0.1",
+    "jsonld": "^0.3.0",
     "lodash": "^2.4.0",
     "lru-cache": "^2.5.0",
+    "mime": "^1.2.11",
+    "mongodb": "^2.0.40",
+    "mongoose": "^4.1.10",
+    "mongoose-jsonld": "^0.1.20",
+    "n3": "^0.4.0",
+    "negotiate": "^1.0.1",
+    "qejs": "^3.0.0",
+    "request": "^2.27.0",
+    "tson": "0.0.5",
     "uritemplate": "^0.3.0"
   },
   "optionalDependencies": {

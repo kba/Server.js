@@ -62,6 +62,9 @@
 -%>
     <li>
       <a href="?subject=<%= encodeURIComponent(subject) %>"><%
+        console.log('subject:' + subject);
+        console.log('predicate:' + predicate);
+        console.log('object:' + object);
         %><abbr title="<%= subject %>"><%= shorten(subject) %></abbr><%
       %></a>
       <a href="?predicate=<%= encodeURIComponent(predicate) %>"><%
@@ -95,7 +98,7 @@ function capitalizeFirst(string) {
 }
 
 function shorten(entity) {
-  return entity.match(/([^\/#]*)[\/#]?$/)[1] || entity;
+  return entity.match(/([^\/#]*)[\/#]?$/)[1] || entity;
 }
 
 function formatNumber(number) {
