@@ -125,6 +125,7 @@ else {
       catch (error) {
         delete datasources[datasourcePath];
         process.stderr.write('Could not load datasource ' + datasourceName + ': ' + error.message + '\n');
+        process.stderr.write(error.stack);
       }
     }
   }
